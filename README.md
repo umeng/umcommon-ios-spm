@@ -52,20 +52,6 @@ import UMCommon
 
 SDK 初始化及接口使用请参考 [友盟官方文档](https://developer.umeng.com/docs/66632/detail/66885)。
 
-## 与其他友盟 SDK 一起集成
-
-不同业务 SDK 使用独立仓库。本仓库仅提供 UMCommon 和 UMDevice，不包含 Push、APM、Share 等业务 SDK。
-
-集成依赖 UMCommon 的业务 SDK 时，如果其 SwiftPM 包未声明对本仓库的依赖，需要在 App Target 中同时添加本仓库的 `UMCommon` product，并遵循对应业务 SDK 的兼容版本说明。
-
-不要通过 CocoaPods、手动导入或其他 SwiftPM 包重复引入 UMCommon / UMDevice，以免出现重复符号或模块冲突。
-
-## 版本管理
-
-- 已发布的 tag 不修改、不删除，每个 tag 固定一组 SDK 版本。
-- README 等文档可以在 `main` 分支独立更新，无需为文档修改发布新版本。
-- SDK 二进制更新后使用新的三段式版本 tag 发布。
-
 ## 许可
 
 SDK 为友盟版权所有的闭源二进制组件，使用须遵循友盟 SDK 相关协议。
